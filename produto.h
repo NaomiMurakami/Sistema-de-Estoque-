@@ -1,7 +1,7 @@
 #ifndef PRODUTO_H
 #define PRODUTO_H
 
-#include "categoria.h" // Necessário para reconhecer o struct Categoria
+#include "categoria.h"
 
 #define MAX_PRODUTOS 50
 
@@ -12,7 +12,8 @@ struct Produto {
     float precoUnitario;
     int quantidadeEstoque;
     int disponivelParaVenda;
-    int codigoCategoria; // Campo para associar a categoria
+    int codigoCategoria;
+    int ativo;
 };
 
 void exibirProduto(struct Produto produto);
@@ -21,5 +22,7 @@ int buscarPorCodigo(struct Produto produtos[], int total, int codigo);
 int buscarPorNome(struct Produto produtos[], int total, char nome[]);
 void listarProdutos(struct Produto produtos[], int total);
 void pesquisarProduto(struct Produto produtos[], int total);
+void alterarEstoque(struct Produto produtos[], int totalProdutos);
+int excluirProduto(struct Produto produtos[], int totalProdutos);
 
 #endif

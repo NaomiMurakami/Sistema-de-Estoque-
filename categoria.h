@@ -9,7 +9,7 @@ struct Categoria {
 };
 
 /*decalaracao das funcoes da categoria*/
-int buscarCategoriasPorCodigo(struct Categoria categorias[], int totalCategorias, int codigo);
+int buscarCategoriaPorCodigo(struct Categoria categorias[], int totalCategorias, int codigo);
 int cadastrarCategoria(struct Categoria categorias[], int totalCategorias);
 void listarCategorias(struct Categoria categorias[], int totalCategorias);
 
